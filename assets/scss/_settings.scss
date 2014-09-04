@@ -1,0 +1,48 @@
+/* =Settings
+-------------------------------------------------------------- */
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+$montserrat: 'Montserrat', sans-serif;
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+$lato: 'Lato', sans-serif;
+
+// base color scheme
+$gray: #595959;
+$mid-gray: #dfdfdf;
+$light-gray: #696969;
+$lighter-gray: #e8e8e8;
+$lightest-gray: #f4f4f4;
+$some-gray: #acacac;
+$dark-gray: #262626;
+$purple-gray: #605268;
+$purple: #662d91;
+$light-purple: #8451a1;
+$dark-purple: #2f1c3a;
+$gold: #c6a65d;
+$yellow: #ebaa16;
+$light-yellow: #ecc46a;
+$light-white: #f4f4f4;
+$white: #ffffff;
+
+// base color settings
+$primary-bg-color: rgba(0, 0, 0, 0.85);
+//$primary-bg-color: $purple;
+$secondary-bg-color: $white;
+$tertiary-bg-color: $dark-gray;
+$header-text-color: $lightest-gray;
+$header-text-purple: $light-purple;
+
+// base settings
+$base-font-size: 1.8rem;
+$base-font-family: $lato;
+$base-font-weight: 400;
+$base-text-color: $purple-gray;
+
+$heading-font-family: $montserrat;
+
+// responsive settings
+$break-smallest: 550px;
+$break-small: 640px;
+$break-medium: 768px;
+$break-large: 960px;

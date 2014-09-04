@@ -1,0 +1,34 @@
+/* =Mixins
+-------------------------------------------------------------- */
+
+// responsive media queries
+@mixin responsive($media) {
+    @if $media == smallest-screens {
+        @media only screen and (max-width: $break-smallest - 1) {
+            @content;
+        }
+    }
+    @if $media == small-screens {
+        @media only screen and (max-width: $break-small - 1) {
+            @content;
+        }
+    }
+
+    @else if $media == medium-screens {
+        @media only screen and (min-width: $break-small) and (max-width: $break-large - 1) {
+            @content;
+        }
+    }
+
+    @else if $media == large-screens {
+        @media only screen and (min-width: $break-large) {
+            @content;
+        }
+    }
+
+    @else if $media == wide-screens {
+        @media only screen and (min-width: $break-large) {
+            @content;
+        }
+    }
+}

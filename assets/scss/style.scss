@@ -1,0 +1,20 @@
+// configure the style from base settings
+@import 'settings';
+
+// include any mixins
+@import 'mixins';
+
+// include semantic grid framework
+@import 'grid';
+
+// include animate.css
+@import 'animate';
+
+// include the base styles and typography
+@import 'base';
+@import 'typography';
+
+// include all other partials
+@import 'buttons';
+@import 'layout';
+@import 'modules';

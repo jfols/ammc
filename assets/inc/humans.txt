@@ -1,0 +1,41 @@
+/* TEAM */
+
+	Chef: The CreativeFuse Initiative
+	Contact: care[at]creativefuse.org
+	Twitter: @theCreativeFuse
+	From: Dayton, Ohio USA
+
+	Code-House: Rainy Day Media LLC
+	Contact: hello[at]rainydaymedia.net
+	Twitter: @rainydaymedia
+	From: Dayton, Ohio USA
+
+	Designer & Developer: Ed Heltzel
+	Contact: ed[at]rainydaymedia.net
+	Twitter: @ginfuru
+	From: Dayton, Ohio USA
+
+	Developer: Todd Miller
+	Contact: todd[at]rainydaymedia.net
+	Twitter: @toddses
+	From: Dayton, Ohio USA
+
+/* SPECIAL MENTION */
+
+	Sous-Chef: Casey Telger with The CreativeFuse Initiative
+	From: Dayton, Ohio USA
+
+	Prep-Chef: Gerrad Wise with The CreativeFuse Initiative
+	From: Dayton, Ohio USA
+
+	Expeditor: Andy Baker with The CreativeFuse Initiative
+	From: Dayton, Ohio USA
+
+
+/* SITE */
+
+	Last update: 08-15-2014
+	Languages: PHP (Wordpress flavor), HTML5, CSS3 using SASS (SCSS flavor), JavaScript (jQuery style), Modernizr
+	IDE: iTerm2, Terminal, Sublime Text, Transmit, FileZilla, Chrome DevTools
+	CLI: Git, Gulp, Bower
+
