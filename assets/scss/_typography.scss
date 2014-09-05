@@ -13,6 +13,7 @@
 .headingYellow { color: $yellow; }
 .footerQuiet   { color: $light-gray; }
 .footerLoud    { color: $mid-gray; }
+.white         { color: $white; }
 
 .headingMargins { margin: 1rem 0; }
 .blockMargins   { margin: 0.5rem 0; }
@@ -36,6 +37,7 @@
 .p      { font-size: 1.8em; }
 .p-alt  { font-size: 1.6em; }
 .small  { display: block; font-size: 1.2em; }
+.medium { font-size: 1.5rem }
 .big    { display: block; font-size: 2.8em; line-height: 0.9em; }
 
 .italic { font-style: italic; }

@@ -71,4 +71,26 @@ jQuery(document).ready(function($) {
         // wash, rinse, and repeat every 4.5 seconds
         setTimeout(wordFlip, 4500);
     })();
+
+// Products Services aka terrible javascript that I'm gonna fix
+    $("#service-select li.one a").click(function(e) {
+        $(".service").removeClass("current");
+        $(".service.one").addClass("current");
+        e.preventDefault();
+    });
+    $("#service-select li.two a").click(function(e) {
+        $(".service").removeClass("current");
+        $(".service.two").addClass("current");
+        e.preventDefault();
+    });
+    $("#service-select li.three a").click(function(e) {
+        $(".service").removeClass("current");
+        $(".service.three").addClass("current");
+        e.preventDefault();
+    });
+    $("#service-select li.four a").click(function(e) {
+        $(".service").removeClass("current");
+        $(".service.four").addClass("current");
+        e.preventDefault();
+    });
 });

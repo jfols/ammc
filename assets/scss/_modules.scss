@@ -236,3 +236,109 @@
         input { width: 94.5%; }
     }
 }
+
+// Services / Products
+// --------------------------------------------------------
+
+.capabilities {
+    background: url("../images/irongrip_@2X.png") center center repeat-x;
+}
+
+.services,
+.products {
+    box-sizing: border-box;
+    padding: 3rem;
+}
+
+.info-box {
+    background: $white;
+    border-radius: 0.3em;
+    overflow: hidden;
+    width: 100%;
+
+    .info-box-top {
+        background: $lightest-gray;
+        border-bottom: 1px solid $lighter-gray;
+        padding: 1.5rem;
+    }
+
+    .product-list {
+        padding: 1.5rem;
+
+        ul {
+            list-style: none;
+            @include row();
+
+            li {
+                @include column(5);
+                &:before {
+                    content: '>';
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+
+    .products-callout {
+        border: 2px solid $lighter-gray;
+        border-radius: 0.3em;
+        padding: 1.5rem;
+
+        h2:after {
+            background-color: $yellow;
+            display: block;
+            margin: 0 auto;
+            content: '';
+            height: 1px;
+            width: 70%;
+        }
+    }
+}
+
+.services {
+    .services-container {
+        .service {
+            display: none;
+            &.current { display: block; }
+        }
+    }
+}
+
+.products {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
