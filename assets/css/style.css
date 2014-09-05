@@ -2673,6 +2673,17 @@ p.aboutCopy {
     left: -0.3rem;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
+  .quickJoin .social {
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: cover; }
+  .quickJoin .facebook {
+    background: url("../images/facebook.svg") center center no-repeat; }
+  .quickJoin .linkedin {
+    background: url("../images/linkedin.svg") center center no-repeat;
+    margin: 0 1rem; }
 
 .messager input {
   width: 100%;

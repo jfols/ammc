@@ -124,6 +124,21 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
+
+    .social {
+        width: 3rem;
+        height: 3rem;
+        display: inline-block;
+        vertical-align: middle;
+        background-size: cover;
+    }
+    .facebook {
+        background: url("../images/facebook.svg") center center no-repeat;
+    }
+    .linkedin {
+        background: url("../images/linkedin.svg") center center no-repeat;
+        margin: 0 1rem;
+    }
 }
 
 .messager {
