@@ -255,6 +255,7 @@
     border-radius: 0.3em;
     overflow: hidden;
     width: 100%;
+    @include row();
 
     .info-box-top {
         background: $lightest-gray;
@@ -291,6 +292,22 @@
             content: '';
             height: 1px;
             width: 70%;
+        }
+    }
+
+    #service-select {
+        list-style: none;
+
+        li {
+            @include column(2.5);
+            a {
+                background: $yellow;
+                border-radius: 0.3em;
+                display: inline-block;
+                color: $white;
+                padding: 1rem;
+                width: 100%;
+            }
         }
     }
 }

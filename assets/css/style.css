@@ -2766,7 +2766,16 @@ p.aboutCopy {
   background: #ffffff;
   border-radius: 0.3em;
   overflow: hidden;
-  width: 100%; }
+  width: 100%;
+  display: block;
+  width: 100%;
+  margin: 0 0;
+  *zoom: 1; }
+  .info-box:before, .info-box:after {
+    content: "";
+    display: table; }
+  .info-box:after {
+    clear: both; }
   .info-box .info-box-top {
     background: #f4f4f4;
     border-bottom: 1px solid #e8e8e8;
@@ -2803,6 +2812,20 @@ p.aboutCopy {
       content: '';
       height: 1px;
       width: 70%; }
+  .info-box #service-select {
+    list-style: none; }
+    .info-box #service-select li {
+      display: inline;
+      float: left;
+      width: 25%;
+      margin: 0 0; }
+      .info-box #service-select li a {
+        background: #ebaa16;
+        border-radius: 0.3em;
+        display: inline-block;
+        color: #ffffff;
+        padding: 1rem;
+        width: 100%; }
 
 .services .services-container .service {
   display: none; }
