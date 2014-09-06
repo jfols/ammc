@@ -74,21 +74,29 @@ jQuery(document).ready(function($) {
 
 // Products Services aka terrible javascript that I'm gonna fix
     $("#service-select li.one a").click(function(e) {
+        $("#service-select li.current").removeClass("current");
+        $("#service-select li.one").addClass("current");
         $(".service").removeClass("current");
         $(".service.one").addClass("current");
         e.preventDefault();
     });
     $("#service-select li.two a").click(function(e) {
+        $("#service-select li.current").removeClass("current");
+        $("#service-select li.two").addClass("current");
         $(".service").removeClass("current");
         $(".service.two").addClass("current");
         e.preventDefault();
     });
     $("#service-select li.three a").click(function(e) {
+        $("#service-select li.current").removeClass("current");
+        $("#service-select li.three").addClass("current");
         $(".service").removeClass("current");
         $(".service.three").addClass("current");
         e.preventDefault();
     });
     $("#service-select li.four a").click(function(e) {
+        $("#service-select li.current").removeClass("current");
+        $("#service-select li.four").addClass("current");
         $(".service").removeClass("current");
         $(".service.four").addClass("current");
         e.preventDefault();

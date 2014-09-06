@@ -241,7 +241,7 @@
 // --------------------------------------------------------
 
 .capabilities {
-    background: url("../images/irongrip_@2X.png") center center repeat-x;
+    background: url("../images/irongrip_@2X.png") center center repeat;
 }
 
 .services,
@@ -294,29 +294,59 @@
             width: 70%;
         }
     }
-
-    #service-select {
-        list-style: none;
-
-        li {
-            @include column(2.5);
-            a {
-                background: $yellow;
-                border-radius: 0.3em;
-                display: inline-block;
-                color: $white;
-                padding: 1rem;
-                width: 100%;
-            }
-        }
-    }
 }
 
 .services {
+    #service-select {
+        list-style: none;
+        width: auto;
+        @include row();
+
+        li {
+            box-sizing: border-box;
+            display: table;
+            margin-right: 2%;
+            width: 23.5%;
+            float: left;
+            &:last-child { margin-right: 0; }
+            
+            a {
+                border-radius: 0.3em;
+                box-sizing: border-box;
+                display: table-cell;
+                vertical-align: middle;
+                height: 5rem;
+                color: $gray;
+                padding: 1rem;
+                width: 100%;
+            }
+
+            &.current a {
+                background: $yellow;
+                color: $white;
+            }
+        }
+    }
+
     .services-container {
+        box-sizing: border-box;
+        padding: 1.5rem;
+
         .service {
             display: none;
             &.current { display: block; }
+        }
+    }
+
+    .services-callout {
+        box-sizing: border-box;
+        padding: 1.5rem;
+
+        .container {
+            box-sizing: border-box;
+            padding: 1.5rem;
+            border: 2px solid $lighter-gray;
+            border-radius: 0.3em;
         }
     }
 }
@@ -325,8 +355,19 @@
 
 }
 
+// Featured Product
+// ------------------------------------------
+.featured-container {
+    position: relative;
+    overflow: hidden;
 
-
+    .featured-image {
+        max-width: 50%;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
 
 
 
