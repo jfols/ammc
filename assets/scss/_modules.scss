@@ -244,35 +244,80 @@
     background: url("../images/irongrip_@2X.png") center center repeat;
 }
 
+.products {
+    padding: 0 6rem 6rem 3rem;
+}
+
+.services {
+    padding: 0 3rem 6rem 6rem;
+}
+
 .services,
 .products {
     box-sizing: border-box;
-    padding: 3rem;
+
+    h1 {
+        font-size: 3.2rem;
+        margin-bottom: 5rem;
+    }
+
+    @include responsive(small-screens) {
+        padding: 0 3rem 3rem 3rem;
+    }
 }
 
 .info-box {
     background: $white;
     border-radius: 0.3em;
-    overflow: hidden;
     width: 100%;
+    position: relative;
     @include row();
+
+    &:before {
+        position: absolute;
+        margin-left: -2.6rem;
+        top: -2.6rem;
+        left: 50%;
+        width: 0; 
+        height: 0; 
+        border-left: 2.6rem solid transparent;
+        border-right: 2.6rem solid transparent;
+        
+        border-bottom: 2.6rem solid $lightest-gray;
+    }
 
     .info-box-top {
         background: $lightest-gray;
         border-bottom: 1px solid $lighter-gray;
-        padding: 1.5rem;
+        border-top: 1px solid $white;
+        border-radius: 0.3rem;
+        padding: 1.8rem;
+
+        @include responsive(small-screens) {
+            display: none;
+        }
     }
 
     .product-list {
-        padding: 1.5rem;
+        padding: 2.2rem;
 
         ul {
-            list-style: none;
             @include row();
+            margin: 1.5rem 0;
+            list-style: none;
 
             li {
                 @include column(5);
+                position: relative;
+                padding-left: 2.5rem;
+                box-sizing: border-box;
+                font-size: 1.5rem;
+                line-height: 2.5rem;
+                
                 &:before {
+                    position: absolute;
+                    top: 0;
+                    left: 0.7rem;
                     content: '>';
                     margin-right: 1rem;
                 }
@@ -285,13 +330,23 @@
         border-radius: 0.3em;
         padding: 1.5rem;
 
+        h2 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+
         h2:after {
             background-color: $yellow;
             display: block;
-            margin: 0 auto;
+            margin: 1.4rem auto 1.3rem auto;
             content: '';
             height: 1px;
             width: 70%;
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 1.6;
         }
     }
 }
@@ -315,9 +370,10 @@
                 box-sizing: border-box;
                 display: table-cell;
                 vertical-align: middle;
+                text-transform: uppercase;
                 height: 5rem;
                 color: $gray;
-                padding: 1rem;
+                padding: 0.5rem;
                 width: 100%;
             }
 
@@ -330,17 +386,72 @@
 
     .services-container {
         box-sizing: border-box;
-        padding: 1.5rem;
+        padding: 2.2rem;
+        @include responsive(small-screens) { 
+            width: auto;
+        }
 
         .service {
             display: none;
             &.current { display: block; }
+
+            ul {
+                list-style: none;
+                margin-top: 1.5rem;
+                li {
+                    line-height: 2.5rem;
+                    &:before {
+                        content: '>';
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+
+        @include responsive(small-screens) {
+            .service {
+                display: block;
+            }
         }
     }
 
     .services-callout {
         box-sizing: border-box;
-        padding: 1.5rem;
+        padding: 2.2rem;
+        @include responsive(small-screens) { 
+            width: auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            // margin-bottom: 1rem;
+            text-transform: uppercase;
+
+            &:after {
+                background-color: $yellow;
+                display: block;
+                margin: 1.4rem auto 1.3rem auto;
+                content: '';
+                height: 1px;
+                width: 100%;
+            }
+        }
+
+        a.loudButton {
+            box-sizing: border-box;
+            border-radius: 0.3rem;
+            display: inline-block;
+            background: $purple;
+            color: $white;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            width: 100%;
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 1.6;
+        }
 
         .container {
             box-sizing: border-box;
@@ -358,14 +469,82 @@
 // Featured Product
 // ------------------------------------------
 .featured-container {
+    // max-width: 1000px;
+    padding: 0 6rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-bottom: 6rem;
     position: relative;
     overflow: hidden;
+    z-index: 0;
 
     .featured-image {
-        max-width: 50%;
+        max-width: 45%;
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 6rem;
+        top: 8rem;
+        z-index: -1;
+        @include responsive(small-screens) {
+            position: static;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        
+        img { max-width: 100%; }
+    }   
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    h1 {
+        font-size: 6rem;
+        display: inline-block;
+        margin-bottom: 2rem;
+        max-width: 70%;
+        @include responsive(small-screens) {
+            max-width: none;
+        }
+    }
+    h3 {
+        font-size: 3.5rem;
+    }
+
+    .feature-content {
+        max-width: 47%;
+        @include responsive(small-screens) {
+            max-width: none;
+        }
+
+        p {
+            font-size: 2rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+            li {
+                position: relative;
+                padding-left: 2.5rem;
+                box-sizing: border-box;
+                font-size: 1.5rem;
+                line-height: 2.5rem;
+                
+                &:before {
+                    position: absolute;
+                    top: 0;
+                    left: 0.7rem;
+                    content: '>';
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+
+    .feature-phone {
+        p { margin-bottom: 0; }
     }
 }
 
