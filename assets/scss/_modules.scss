@@ -536,6 +536,10 @@
         right: 6rem;
         top: 8rem;
         z-index: -1;
+        @media (max-width: 1160px) {
+            max-width: 30%;
+            right: 0;
+        }
         @include responsive(small-screens) {
             position: static;
             max-width: 100%;
@@ -561,20 +565,22 @@
     h3 {
         font-size: 3.5rem;
     }
+    @media (max-width: 1470px) {
+        h1 { font-size: 4rem; }
+        h2 { font-size: 2.3rem; }
+        h3 { font-size: 2rem; }
+    }
     @media (max-width: 900px) {
-        h1 {
-            font-size: 2rem;
-        }
-        h2 {
-            font-size: 2.3rem;
-        }
-        h3 {
-            font-size: 2rem;
-        }
+        h1 { font-size: 3rem; }
+        h2 { font-size: 2.3rem; }
+        h3 { font-size: 2rem; }
     }
 
     .feature-content {
         max-width: 47%;
+        @media (max-width: 1160px) {
+            max-width: 65%;
+        }
         @include responsive(small-screens) {
             max-width: none;
         }

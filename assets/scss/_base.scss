@@ -37,6 +37,7 @@ body {
 }
 
 header {
+    overflow: hidden;
     @extend %fullWidth;
     @extend %fullHeight;
 
@@ -44,21 +45,21 @@ header {
     @include responsive(small-screens) {
         height: auto;
         position: relative;
+        padding-bottom: 6rem;
     }
 
     .headline-container {
         width: 100%;
-        @include responsive(small-screens) {
-            p {
-                margin-bottom: 6rem;
-            }
-        }
     }
 }
 
 footer {
     padding-top: 5rem;
     background-color: $tertiary-bg-color;
+
+    .contacts {
+        padding: 0 3rem;
+    }
 }
 
 a {

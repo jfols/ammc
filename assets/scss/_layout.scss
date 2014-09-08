@@ -41,6 +41,11 @@
     @media (max-width: 840px) {
         width: 30rem;
     }
+    @include responsive(small-screens) {
+        height: 14rem;
+        left: -15%;
+        width: 130%;
+    }
 }
 
 .callUs {
@@ -140,22 +145,24 @@ p.aboutCopy {
     .callUs {
         text-align: center;
         padding-right: 0;
+        padding-top: 2rem;
     }
 
     .logo {
         position: relative;
-        top: -2rem;
+        // top: -2rem;
         margin: 0 auto;
         padding-left: 0;
+        padding-top: 0;
     }
 
     .title {
-        transform: translateY(-80%);
-        top: 40%;
+        transform: none;
+        top: auto;
     }
 }
 
 @include responsive(smallest-screens) {
-    .title { transform: translateY(-90%); }
+    // .title { transform: translateY(-90%); }
     #quoteButton { display: none; }
 }

@@ -20,7 +20,7 @@ jQuery(document).ready(function($) {
     });
 
 // executes when the user clicks the expander
-    $("#expander").click(function() {
+    $("#expander, #contact-us-today").click(function(e) {
         // slides open the messager section and scrolls down to it,
         // and the opposite if the messager is already open
         if ($(".messager").is(":visible")) {
@@ -32,6 +32,7 @@ jQuery(document).ready(function($) {
                         .velocity("scroll");
         }
 
+        e.preventDefault();
         flipExpander();
     });
 
@@ -103,6 +104,6 @@ jQuery(document).ready(function($) {
     });
 
     // FitText
-    $("#main-headline").fitText(2.3, {minFontSize: '35px'});
-    $("#sub-headline").fitText(2.3, {minFontSize: '35px'});
+    $("#main-headline").fitText(2.3, {minFontSize: '25px'});
+    $("#sub-headline").fitText(2.3, {minFontSize: '25px'});
 });

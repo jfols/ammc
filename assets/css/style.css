@@ -2354,20 +2354,21 @@ body {
       height: auto; } }
 
 header {
+  overflow: hidden;
   min-height: 100%; }
   @media only screen and (max-width: 639px) {
     header {
       height: auto;
-      position: relative; } }
+      position: relative;
+      padding-bottom: 6rem; } }
   header .headline-container {
     width: 100%; }
-    @media only screen and (max-width: 639px) {
-      header .headline-container p {
-        margin-bottom: 6rem; } }
 
 footer {
   padding-top: 5rem;
   background-color: #262626; }
+  footer .contacts {
+    padding: 0 3rem; }
 
 a {
   color: inherit;
@@ -2537,6 +2538,11 @@ small a:hover {
   @media (max-width: 840px) {
     .logo {
       width: 30rem; } }
+  @media only screen and (max-width: 639px) {
+    .logo {
+      height: 14rem;
+      left: -15%;
+      width: 130%; } }
 
 .callUs {
   height: 5.8rem;
@@ -2613,21 +2619,19 @@ p.aboutCopy {
 @media only screen and (max-width: 639px) {
   .callUs {
     text-align: center;
-    padding-right: 0; }
+    padding-right: 0;
+    padding-top: 2rem; }
 
   .logo {
     position: relative;
-    top: -2rem;
     margin: 0 auto;
-    padding-left: 0; }
+    padding-left: 0;
+    padding-top: 0; }
 
   .title {
-    transform: translateY(-80%);
-    top: 40%; } }
+    transform: none;
+    top: auto; } }
 @media only screen and (max-width: 549px) {
-  .title {
-    transform: translateY(-90%); }
-
   #quoteButton {
     display: none; } }
 /* =Modules
@@ -3038,6 +3042,10 @@ p.aboutCopy {
     right: 6rem;
     top: 8rem;
     z-index: -1; }
+    @media (max-width: 1160px) {
+      .featured-container .featured-image {
+        max-width: 30%;
+        right: 0; } }
     @media only screen and (max-width: 639px) {
       .featured-container .featured-image {
         position: static;
@@ -3058,15 +3066,25 @@ p.aboutCopy {
         max-width: none; } }
   .featured-container h3 {
     font-size: 3.5rem; }
+  @media (max-width: 1470px) {
+    .featured-container h1 {
+      font-size: 4rem; }
+    .featured-container h2 {
+      font-size: 2.3rem; }
+    .featured-container h3 {
+      font-size: 2rem; } }
   @media (max-width: 900px) {
     .featured-container h1 {
-      font-size: 2rem; }
+      font-size: 3rem; }
     .featured-container h2 {
       font-size: 2.3rem; }
     .featured-container h3 {
       font-size: 2rem; } }
   .featured-container .feature-content {
     max-width: 47%; }
+    @media (max-width: 1160px) {
+      .featured-container .feature-content {
+        max-width: 65%; } }
     @media only screen and (max-width: 639px) {
       .featured-container .feature-content {
         max-width: none; } }
