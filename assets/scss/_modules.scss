@@ -301,6 +301,7 @@
     border-radius: 0.3em;
     width: 100%;
     position: relative;
+    min-height: 481px;
     @include row();
 
     &:before {
@@ -401,6 +402,11 @@
         @include responsive(small-screens) {
             .service {
                 display: block;
+                margin-top: 1rem;
+
+                &:first-child {
+                    margin-top: 0;
+                }
             }
         }
     }
