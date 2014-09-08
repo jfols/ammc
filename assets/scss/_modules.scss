@@ -107,22 +107,39 @@
 
     input {
         @extend %input;
+        box-sizing: border-box;
         padding: 1.5rem;
-        width: 20rem;
+        width: 18rem;
         font-size: 1em;
 
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
+
+        @media (max-width: 1080px) {
+            width: auto;
+        }
+        @media (max-width: 840px) {
+            width: 100%;
+            border-radius: 0.3rem;
+        }
     }
 
     .quickButton {
         @extend .yellowButton;
+        box-sizing: border-box;
         font-size: 1em;
         position: relative;
         left: -0.3rem;
 
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+
+        @media (max-width: 840px) {
+            width: 100%;
+            left: 0;
+            margin-top: 1rem;
+            border-radius: 0.3rem;
+        }
     }
 
     .social {
