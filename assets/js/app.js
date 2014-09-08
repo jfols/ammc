@@ -101,4 +101,8 @@ jQuery(document).ready(function($) {
         $(".service.four").addClass("current");
         e.preventDefault();
     });
+
+    // FitText
+    $("#main-headline").fitText(2.3, {minFontSize: '35px'});
+    $("#sub-headline").fitText(2.3, {minFontSize: '35px'});
 });

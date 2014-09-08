@@ -2349,9 +2349,15 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   color: #605268; }
+  @media only screen and (max-width: 639px) {
+    body {
+      height: auto; } }
 
 header {
   min-height: 100%; }
+  @media only screen and (max-width: 639px) {
+    header {
+      height: auto; } }
 
 footer {
   padding-top: 5rem;
@@ -2360,6 +2366,9 @@ footer {
 a {
   color: inherit;
   text-decoration: none; }
+
+.headline-container {
+  with: 100%; }
 
 /* =Typography
 -------------------------------------------------------------- */
@@ -2522,6 +2531,9 @@ small a:hover {
   background-size: cover; }
   .logo img {
     width: 400px; }
+  @media (max-width: 840px) {
+    .logo {
+      width: 30rem; } }
 
 .callUs {
   height: 5.8rem;
@@ -2548,9 +2560,19 @@ small a:hover {
     vertical-align: top;
     position: relative;
     top: 0.5rem; }
+  @media (max-width: 840px) {
+    .callUs h3 {
+      font-size: 3rem; }
+    .callUs h5 {
+      font-size: 1.5rem; }
+    .callUs h4 {
+      font-size: 2rem; } }
 
 .titleRow {
   height: 80%; }
+  @media only screen and (max-width: 639px) {
+    .titleRow {
+      height: auto; } }
 
 .title {
   position: relative;
@@ -2565,13 +2587,21 @@ p.aboutCopy {
   padding-top: 6rem;
   background-color: #ffffff; }
 
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 6rem; }
+  @media (max-width: 900px) {
+    .container {
+      padding: 0 2rem; } }
+
 .messager {
   display: none;
   background-color: rgba(0, 0, 0, 0.85);
   border: 1px solid transparent; }
 
 .contacts {
-  width: 90%;
+  max-width: 1500px;
   margin: 0 auto; }
 
 .copyright {
@@ -2758,10 +2788,22 @@ p.aboutCopy {
   background: url("../images/irongrip_@2X.png") center center repeat; }
 
 .products {
-  padding: 0 6rem 6rem 3rem; }
+  padding: 0 0 6rem 3rem; }
+  @media (max-width: 900px) {
+    .products {
+      padding: 0 0 2rem 1rem; } }
+  @media (max-width: 640px) {
+    .products {
+      padding-left: 0; } }
 
 .services {
-  padding: 0 3rem 6rem 6rem; }
+  padding: 0 3rem 6rem 0; }
+  @media (max-width: 900px) {
+    .services {
+      padding: 0 1rem 2rem 0; } }
+  @media (max-width: 640px) {
+    .services {
+      padding-right: 0; } }
 
 .services,
 .products {
@@ -2773,7 +2815,7 @@ p.aboutCopy {
   @media only screen and (max-width: 639px) {
     .services,
     .products {
-      padding: 0 3rem 3rem 3rem; } }
+      padding-bottom: 3rem; } }
 
 .info-box {
   background: #ffffff;
@@ -2808,53 +2850,6 @@ p.aboutCopy {
     @media only screen and (max-width: 639px) {
       .info-box .info-box-top {
         display: none; } }
-  .info-box .product-list {
-    padding: 2.2rem; }
-    .info-box .product-list ul {
-      display: block;
-      width: 100%;
-      margin: 0 0;
-      *zoom: 1;
-      margin: 1.5rem 0;
-      list-style: none; }
-      .info-box .product-list ul:before, .info-box .product-list ul:after {
-        content: "";
-        display: table; }
-      .info-box .product-list ul:after {
-        clear: both; }
-      .info-box .product-list ul li {
-        display: inline;
-        float: left;
-        width: 50%;
-        margin: 0 0;
-        position: relative;
-        padding-left: 2.5rem;
-        box-sizing: border-box;
-        font-size: 1.5rem;
-        line-height: 2.5rem; }
-        .info-box .product-list ul li:before {
-          position: absolute;
-          top: 0;
-          left: 0.7rem;
-          content: '>';
-          margin-right: 1rem; }
-  .info-box .products-callout {
-    border: 2px solid #e8e8e8;
-    border-radius: 0.3em;
-    padding: 1.5rem; }
-    .info-box .products-callout h2 {
-      font-size: 2.5rem;
-      text-transform: uppercase; }
-    .info-box .products-callout h2:after {
-      background-color: #ebaa16;
-      display: block;
-      margin: 1.4rem auto 1.3rem auto;
-      content: '';
-      height: 1px;
-      width: 70%; }
-    .info-box .products-callout p {
-      font-size: 1.5rem;
-      line-height: 1.6; }
 
 .services #service-select {
   list-style: none;
@@ -2895,6 +2890,9 @@ p.aboutCopy {
   @media only screen and (max-width: 639px) {
     .services .services-container {
       width: auto; } }
+  @media (max-width: 1300px) {
+    .services .services-container {
+      width: 100%; } }
   .services .services-container .service {
     display: none; }
     .services .services-container .service.current {
@@ -2903,8 +2901,18 @@ p.aboutCopy {
       list-style: none;
       margin-top: 1.5rem; }
       .services .services-container .service ul li {
+        position: relative;
+        padding-left: 2.5rem;
+        box-sizing: border-box;
+        font-size: 1.5rem;
         line-height: 2.5rem; }
+        @media (max-width: 1300px) {
+          .services .services-container .service ul li {
+            width: 100%; } }
         .services .services-container .service ul li:before {
+          position: absolute;
+          top: 0;
+          left: 0.7rem;
           content: '>';
           margin-right: 1rem; }
   @media only screen and (max-width: 639px) {
@@ -2913,7 +2921,7 @@ p.aboutCopy {
 .services .services-callout {
   box-sizing: border-box;
   padding: 2.2rem; }
-  @media only screen and (max-width: 639px) {
+  @media (max-width: 1300px) {
     .services .services-callout {
       width: auto; } }
   .services .services-callout h2 {
@@ -2944,8 +2952,58 @@ p.aboutCopy {
     border: 2px solid #e8e8e8;
     border-radius: 0.3em; }
 
+.products .product-list {
+  padding: 2.2rem; }
+  .products .product-list ul {
+    display: block;
+    width: 100%;
+    margin: 0 0;
+    *zoom: 1;
+    margin: 1.5rem 0;
+    list-style: none; }
+    .products .product-list ul:before, .products .product-list ul:after {
+      content: "";
+      display: table; }
+    .products .product-list ul:after {
+      clear: both; }
+    .products .product-list ul li {
+      display: inline;
+      float: left;
+      width: 50%;
+      margin: 0 0;
+      position: relative;
+      padding-left: 2.5rem;
+      box-sizing: border-box;
+      font-size: 1.5rem;
+      line-height: 2.5rem; }
+      .products .product-list ul li:before {
+        position: absolute;
+        top: 0;
+        left: 0.7rem;
+        content: '>';
+        margin-right: 1rem; }
+  @media (max-width: 1200px) {
+    .products .product-list ul li {
+      width: 100%; } }
+.products .products-callout {
+  border: 2px solid #e8e8e8;
+  border-radius: 0.3em;
+  padding: 1.5rem; }
+  .products .products-callout h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase; }
+  .products .products-callout h2:after {
+    background-color: #ebaa16;
+    display: block;
+    margin: 1.4rem auto 1.3rem auto;
+    content: '';
+    height: 1px;
+    width: 70%; }
+  .products .products-callout p {
+    font-size: 1.5rem;
+    line-height: 1.6; }
+
 .featured-container {
-  padding: 0 6rem;
   box-sizing: border-box;
   margin: 0 auto;
   padding-bottom: 6rem;
@@ -2969,7 +3027,7 @@ p.aboutCopy {
     font-size: 3rem;
     margin-bottom: 2rem; }
   .featured-container h1 {
-    font-size: 6rem;
+    font-size: 6.5rem;
     display: inline-block;
     margin-bottom: 2rem;
     max-width: 70%; }
@@ -2978,6 +3036,13 @@ p.aboutCopy {
         max-width: none; } }
   .featured-container h3 {
     font-size: 3.5rem; }
+  @media (max-width: 900px) {
+    .featured-container h1 {
+      font-size: 2rem; }
+    .featured-container h2 {
+      font-size: 2.3rem; }
+    .featured-container h3 {
+      font-size: 2rem; } }
   .featured-container .feature-content {
     max-width: 47%; }
     @media only screen and (max-width: 639px) {
@@ -2987,6 +3052,9 @@ p.aboutCopy {
       font-size: 2rem;
       line-height: 1.6;
       margin-bottom: 1.5rem; }
+      @media (max-width: 900px) {
+        .featured-container .feature-content p {
+          font-size: 1.5rem; } }
     .featured-container .feature-content ul {
       list-style: none;
       margin-bottom: 1.5rem; }
