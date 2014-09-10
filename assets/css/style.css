@@ -2363,6 +2363,18 @@ header {
       padding-bottom: 6rem; } }
   header .headline-container {
     width: 100%; }
+    header .headline-container .intro-headline {
+      font-size: 2.5rem;
+      margin-bottom: 4rem; }
+      @media only screen and (max-width: 639px) {
+        header .headline-container .intro-headline {
+          font-size: 1.6rem;
+          margin-bottom: 2rem; } }
+    header .headline-container .exit-headline {
+      margin-top: 3.5rem; }
+      @media only screen and (max-width: 639px) {
+        header .headline-container .exit-headline {
+          margin-top: 2rem; } }
 
 footer {
   padding-top: 5rem;

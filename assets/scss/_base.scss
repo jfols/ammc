@@ -50,6 +50,21 @@ header {
 
     .headline-container {
         width: 100%;
+
+        .intro-headline {
+            font-size: 2.5rem;
+            margin-bottom: 4rem;
+            @include responsive(small-screens) {
+                font-size: 1.6rem;
+                margin-bottom: 2rem;
+            }
+        }
+        .exit-headline {
+            margin-top: 3.5rem;
+            @include responsive(small-screens) {
+                margin-top: 2rem;
+            }
+        }
     }
 }
 
