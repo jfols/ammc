@@ -2602,7 +2602,8 @@ small a:hover {
 .title {
   position: relative;
   top: 50%;
-  transform: translateY(-60%); }
+  transform: translateY(-60%);
+  -webkit-transform: translateY(-60%); }
 
 p.aboutCopy {
   font-size: 1.6em;
@@ -3062,7 +3063,8 @@ p.aboutCopy {
   padding-bottom: 6rem;
   position: relative;
   overflow: hidden;
-  z-index: 0; }
+  z-index: 0;
+  -webkit-transform: translateZ(0); }
   .featured-container .featured-image {
     max-width: 45%;
     position: absolute;
