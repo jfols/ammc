@@ -104,6 +104,9 @@
     top: 50%;
     transform: translateY(-60%);
     -webkit-transform: translateY(-60%);
+    @include responsive(small-screens) {
+        -webkit-transform: none;
+    }
 }
 
 p.aboutCopy {
