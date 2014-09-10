@@ -116,6 +116,7 @@ p.aboutCopy {
 }
 
 .container {
+    box-sizing: border-box;
     max-width: 1500px;
     margin: 0 auto;
     padding: 0 6rem;
@@ -131,6 +132,7 @@ p.aboutCopy {
 }
 
 .contacts {
+    box-sizing: border-box;
     max-width: 1500px;
 
     margin: 0 auto;
@@ -138,7 +140,7 @@ p.aboutCopy {
 
 .copyright {
     @extend .centerText;
-    padding-bottom: 1rem;
+    padding-bottom: 4rem;
 }
 
 @include responsive(small-screens) {

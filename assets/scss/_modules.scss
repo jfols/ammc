@@ -242,6 +242,12 @@
         text-align: center;
         font-size: 1.2em;
     }
+
+    @include responsive(small-screens) {
+        &.two.column {
+            padding-top: 2rem;
+        }
+    }
 }
 
 .two.column{
@@ -343,6 +349,11 @@
             width: 23.5%;
             float: left;
             &:last-child { margin-right: 0; }
+            @media (max-width: 960px) { 
+                width: 48%;
+                margin-right: 2%;
+                &:nth-child(2) { margin-right: 0; }
+            }
             
             a {
                 border-radius: 0.3em;

@@ -56,9 +56,11 @@ header {
 footer {
     padding-top: 5rem;
     background-color: $tertiary-bg-color;
+    overflow: hidden;
 
     .contacts {
-        padding: 0 3rem;
+        padding: 0 6rem;
+        @media (max-width: 900px) { padding: 0 2rem; }
     }
 }
 

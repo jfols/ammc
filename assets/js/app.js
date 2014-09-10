@@ -106,4 +106,15 @@ jQuery(document).ready(function($) {
     // FitText
     $("#main-headline").fitText(2.3, {minFontSize: '25px'});
     $("#sub-headline").fitText(2.3, {minFontSize: '25px'});
+
+    //
+    mediaCheck({
+        media: '(max-width: 549px)',
+        entry: function() {
+            $('#footer-main').prependTo('#footer-contacts');
+        },
+        exit: function() {
+            $('#footer-main').insertAfter('#before-footer-main');
+        }
+    });
 });

@@ -2366,9 +2366,13 @@ header {
 
 footer {
   padding-top: 5rem;
-  background-color: #262626; }
+  background-color: #262626;
+  overflow: hidden; }
   footer .contacts {
-    padding: 0 3rem; }
+    padding: 0 6rem; }
+    @media (max-width: 900px) {
+      footer .contacts {
+        padding: 0 2rem; } }
 
 a {
   color: inherit;
@@ -2597,6 +2601,7 @@ p.aboutCopy {
   background-color: #ffffff; }
 
 .container {
+  box-sizing: border-box;
   max-width: 1500px;
   margin: 0 auto;
   padding: 0 6rem; }
@@ -2610,11 +2615,12 @@ p.aboutCopy {
   border: 1px solid transparent; }
 
 .contacts {
+  box-sizing: border-box;
   max-width: 1500px;
   margin: 0 auto; }
 
 .copyright {
-  padding-bottom: 1rem; }
+  padding-bottom: 4rem; }
 
 @media only screen and (max-width: 639px) {
   .callUs {
@@ -2799,6 +2805,9 @@ p.aboutCopy {
     padding-right: 1rem;
     text-align: center;
     font-size: 1.2em; }
+  @media only screen and (max-width: 639px) {
+    .footerTable.two.column {
+      padding-top: 2rem; } }
 
 .two.column {
   line-height: 2em; }
@@ -2894,6 +2903,12 @@ p.aboutCopy {
     float: left; }
     .services #service-select li:last-child {
       margin-right: 0; }
+    @media (max-width: 960px) {
+      .services #service-select li {
+        width: 48%;
+        margin-right: 2%; }
+        .services #service-select li:nth-child(2) {
+          margin-right: 0; } }
     .services #service-select li a {
       border-radius: 0.3em;
       box-sizing: border-box;
