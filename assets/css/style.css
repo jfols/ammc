@@ -2542,6 +2542,9 @@ small a:hover {
   padding-left: 1rem;
   padding-right: 1rem; }
 
+body {
+  -webkit-transform: translateZ(0); }
+
 .logo {
   width: 45rem;
   height: 11rem;

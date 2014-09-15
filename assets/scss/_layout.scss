@@ -25,6 +25,10 @@
 .bigTopMargin  { margin-top: 5rem; }
 .horizontalPad { padding-left: 1rem; padding-right: 1rem; }
 
+body {
+    -webkit-transform: translateZ(0);
+}
+
 // layout classes
 .logo {
     width: 45rem;
