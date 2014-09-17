@@ -2546,22 +2546,16 @@ body {
   -webkit-transform: translateZ(0); }
 
 .logo {
-  width: 45rem;
+  box-sizing: border-box;
+  max-width: 55rem;
   height: 11rem;
   padding-top: 5rem;
-  padding-left: 6rem;
-  background: url("../images/ammc_logo.svg") center center no-repeat;
-  background-size: cover; }
+  padding-left: 6rem; }
   .logo img {
-    width: 400px; }
-  @media (max-width: 840px) {
-    .logo {
-      width: 30rem; } }
+    max-width: 100%; }
   @media only screen and (max-width: 639px) {
     .logo {
-      height: 14rem;
-      left: -15%;
-      width: 130%; } }
+      padding: 2rem 3rem 0 3rem; } }
 
 .callUs {
   height: 5.8rem;
@@ -2649,9 +2643,7 @@ p.aboutCopy {
 
   .logo {
     position: relative;
-    margin: 0 auto;
-    padding-left: 0;
-    padding-top: 0; }
+    margin: 0 auto; }
 
   .title {
     transform: none;
