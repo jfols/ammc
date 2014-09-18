@@ -107,9 +107,10 @@ body {
 
 @include responsive(small-screens) {
     .two.column   { @include column(3.3); padding-top: 1rem; }
-    .four.column  { @include column(9); }
+    .four.column  { @include column(10); }
     .five.column  { @include column(9); }
     .half.column  { @include column(10); }
+    .six.column  { @include column(10); }
     .push.halfCol  { @include push(0.5); }
 }
 

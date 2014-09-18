@@ -27,12 +27,27 @@
     background-color: $lighter-gray;
 
     @extend .montserrat;
-    color: #bababa;
+    color: $gray;
     text-transform: uppercase;
 
     &:focus {
         outline: 0;
     }
+}
+::-webkit-input-placeholder {
+   color: $gray;
+}
+
+:-moz-placeholder {
+   color: $gray;  
+}
+
+::-moz-placeholder {
+   color: $gray;  
+}
+
+:-ms-input-placeholder {  
+   color: $gray;  
 }
 
 %messagerInput {
@@ -72,7 +87,7 @@
 .callList {
     @extend .leftText;
     display: inline-block;
-    width: 13rem;
+    width: 20.5rem;
 
     span {
         display: none;
@@ -94,6 +109,11 @@
         animation-delay: 0s;
         animation-iteration-count: 1;
     }
+
+    @include responsive(small-screens) {
+        text-align: center;
+    }
+
 }
 
 .quickJoin {
@@ -211,6 +231,10 @@
     line-height: 2.5em;
 }
 
+.footerDivider {
+    border-right: 1px solid $gray;
+}
+
 .separator {
     width: 20rem;
     margin: 4rem auto;
@@ -226,6 +250,39 @@
 
 .footerTable {
     white-space: nowrap;
+
+    &.oneThird.column {
+        width: 30%;
+        display: block;
+        margin-right: 3%;
+
+        &.footerDivider {
+            width: 21%;
+            margin-right: 12%;
+
+            @media (max-width: 1040px) {
+                width: 24%;
+                margin-right: 3%;
+                border: none;
+            }
+            @include responsive(small-screens) {
+                width: 100%;
+                margin: 0;
+            }
+        }
+        @media (max-width: 1040px) {
+            width: 33%;
+            .footerIconLabel {
+                small {
+                    // font-size: 1.2rem;
+                }
+            }
+        }
+        @media (max-width: 640px) {
+            width: 100%;
+            margin: 3rem 0 0 0;
+        }
+    }
 
     .footerRow {
         display: table-row;
@@ -329,6 +386,7 @@
         border-top: 1px solid $white;
         border-radius: 0.3rem;
         padding: 1.8rem;
+        color: $dark-gray;
 
         @include responsive(small-screens) {
             display: none;
@@ -362,7 +420,7 @@
                 vertical-align: middle;
                 text-transform: uppercase;
                 height: 5rem;
-                color: $gray;
+                color: $dark-gray;
                 padding: 0.5rem;
                 width: 100%;
             }

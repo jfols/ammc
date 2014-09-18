@@ -47,6 +47,10 @@ body {
     @media (max-width: 840px) {
         // width: 30rem;
     }
+    @media (max-width: 1120px) {
+        max-width: 45rem;
+        padding-left: 3rem;
+    }
     @include responsive(small-screens) {
         padding: 2rem 3rem 0 3rem;
         // height: 14rem;
@@ -65,6 +69,7 @@ body {
     h5 { text-transform: none; }
     h3 {
         span {
+            text-transform: none;
             display: inline-block;
             font-size: 0.5em;
             font-family: $lato;
@@ -82,9 +87,10 @@ body {
         vertical-align: top;
         position: relative;
         top: 0.5rem;
+        white-space: nowrap;
     }
 
-    @media (max-width: 840px) {
+    @media (max-width: 1120px) {
         h3 {
             font-size: 3rem;
         }

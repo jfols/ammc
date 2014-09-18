@@ -156,7 +156,7 @@ body {
   .four.column {
     display: inline;
     float: left;
-    width: 90%;
+    width: 100%;
     margin: 0 0; }
 
   .five.column {
@@ -166,6 +166,12 @@ body {
     margin: 0 0; }
 
   .half.column {
+    display: inline;
+    float: left;
+    width: 100%;
+    margin: 0 0; }
+
+  .six.column {
     display: inline;
     float: left;
     width: 100%;
@@ -2486,9 +2492,17 @@ a {
 
 .footerTypography .footerLineHeight a:hover {
   color: #c6a65d; }
-
-small a:hover {
-  color: #c6a65d; }
+.footerTypography .footerLineHeight small {
+  font-size: 1.6rem;
+  line-height: 1.6; }
+  .footerTypography .footerLineHeight small a:hover {
+    color: #c6a65d; }
+  @media (max-width: 1040px) {
+    .footerTypography .footerLineHeight small {
+      font-size: 1.5rem; } }
+  @media (max-width: 640px) {
+    .footerTypography .footerLineHeight small {
+      font-size: 1.4rem; } }
 
 @media only screen and (max-width: 639px) {
   .typography h1 {
@@ -2553,6 +2567,10 @@ body {
   padding-left: 6rem; }
   .logo img {
     max-width: 100%; }
+  @media (max-width: 1120px) {
+    .logo {
+      max-width: 45rem;
+      padding-left: 3rem; } }
   @media only screen and (max-width: 639px) {
     .logo {
       padding: 2rem 3rem 0 3rem; } }
@@ -2566,6 +2584,7 @@ body {
   .callUs h5 {
     text-transform: none; }
   .callUs h3 span {
+    text-transform: none;
     display: inline-block;
     font-size: 0.5em;
     font-family: "Lato", sans-serif;
@@ -2581,8 +2600,9 @@ body {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    top: 0.5rem; }
-  @media (max-width: 840px) {
+    top: 0.5rem;
+    white-space: nowrap; }
+  @media (max-width: 1120px) {
     .callUs h3 {
       font-size: 3rem; }
     .callUs h5 {
@@ -2669,10 +2689,22 @@ p.aboutCopy {
   border-radius: 0.3em;
   border: none;
   background-color: #e8e8e8;
-  color: #bababa;
+  color: #595959;
   text-transform: uppercase; }
   .messager input:focus, .messager textarea:focus, .quickJoin input:focus {
     outline: 0; }
+
+::-webkit-input-placeholder {
+  color: #595959; }
+
+:-moz-placeholder {
+  color: #595959; }
+
+::-moz-placeholder {
+  color: #595959; }
+
+:-ms-input-placeholder {
+  color: #595959; }
 
 .messager input, .messager textarea {
   border: 1px solid #ffffff;
@@ -2695,7 +2727,7 @@ p.aboutCopy {
 
 .callList {
   display: inline-block;
-  width: 13rem; }
+  width: 20.5rem; }
   .callList span {
     display: none;
     padding-right: 1rem; }
@@ -2709,6 +2741,9 @@ p.aboutCopy {
     animation-duration: 1s;
     animation-delay: 0s;
     animation-iteration-count: 1; }
+  @media only screen and (max-width: 639px) {
+    .callList {
+      text-align: center; } }
 
 .quickJoin {
   padding-top: 1rem; }
@@ -2793,6 +2828,9 @@ p.aboutCopy {
 .footerLineHeight {
   line-height: 2.5em; }
 
+.footerDivider {
+  border-right: 1px solid #595959; }
+
 .separator {
   width: 20rem;
   margin: 4rem auto; }
@@ -2806,6 +2844,29 @@ p.aboutCopy {
 
 .footerTable {
   white-space: nowrap; }
+  .footerTable.oneThird.column {
+    width: 30%;
+    display: block;
+    margin-right: 3%; }
+    .footerTable.oneThird.column.footerDivider {
+      width: 21%;
+      margin-right: 12%; }
+      @media (max-width: 1040px) {
+        .footerTable.oneThird.column.footerDivider {
+          width: 24%;
+          margin-right: 3%;
+          border: none; } }
+      @media only screen and (max-width: 639px) {
+        .footerTable.oneThird.column.footerDivider {
+          width: 100%;
+          margin: 0; } }
+    @media (max-width: 1040px) {
+      .footerTable.oneThird.column {
+        width: 33%; } }
+    @media (max-width: 640px) {
+      .footerTable.oneThird.column {
+        width: 100%;
+        margin: 3rem 0 0 0; } }
   .footerTable .footerRow {
     display: table-row; }
   .footerTable .footerIcon, .footerTable .footerIconLabel {
@@ -2889,7 +2950,8 @@ p.aboutCopy {
     border-bottom: 1px solid #e8e8e8;
     border-top: 1px solid #ffffff;
     border-radius: 0.3rem;
-    padding: 1.8rem; }
+    padding: 1.8rem;
+    color: #262626; }
     @media only screen and (max-width: 639px) {
       .info-box .info-box-top {
         display: none; } }
@@ -2927,7 +2989,7 @@ p.aboutCopy {
       vertical-align: middle;
       text-transform: uppercase;
       height: 5rem;
-      color: #595959;
+      color: #262626;
       padding: 0.5rem;
       width: 100%; }
     .services #service-select li.current a {
