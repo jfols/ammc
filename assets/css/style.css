@@ -2393,8 +2393,9 @@ footer {
         padding: 0 2rem; } }
 
 a {
-  color: inherit;
-  text-decoration: none; }
+  color: inherit; }
+  a.call {
+    text-decoration: none; }
 
 /* =Typography
 -------------------------------------------------------------- */
@@ -2865,8 +2866,11 @@ p.aboutCopy {
         width: 33%; } }
     @media (max-width: 640px) {
       .footerTable.oneThird.column {
-        width: 100%;
-        margin: 3rem 0 0 0; } }
+        width: 100%; }
+        .footerTable.oneThird.column.margin-top {
+          margin: 3rem 0 0 0; }
+        .footerTable.oneThird.column.margin-bottom {
+          margin: 0 0 3rem 0; } }
   .footerTable .footerRow {
     display: table-row; }
   .footerTable .footerIcon, .footerTable .footerIconLabel {
@@ -2983,6 +2987,7 @@ p.aboutCopy {
         .services #service-select li:nth-child(2) {
           margin-right: 0; } }
     .services #service-select li a {
+      text-decoration: none;
       border-radius: 0.3em;
       box-sizing: border-box;
       display: table-cell;
