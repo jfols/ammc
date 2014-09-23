@@ -116,14 +116,17 @@
 
 }
 
+.emailjoin {
+    box-sizing: border-box
+}
+
 .quickJoin {
     @extend .centerText;
     padding-top: 1rem;
 
-
-    small { font-size: 1em; padding-top: 1rem; }
+    small { font-size: 1em; padding-top: 1rem; padding-bottom: 1.5rem; }
     span  { padding: 0; margin: 0; }
-    p     { font-size: 1.6em; line-height: 0.5em; }
+    p     { font-size: 1.6em; line-height: 0.5em; clear: both; margin-top: 1rem; display: inline-block; }
 
     input {
         @extend %input;
@@ -139,8 +142,13 @@
             width: auto;
         }
         @media (max-width: 840px) {
+            box-sizing: border-box;
             width: 100%;
             border-radius: 0.3rem;
+        }
+        @media (max-width: 840px) {
+            width: 93% !important;
+            float: left;
         }
     }
 
