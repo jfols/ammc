@@ -2996,9 +2996,12 @@ p.aboutCopy {
       height: 5rem;
       color: #262626;
       padding: 0.5rem;
-      width: 100%; }
-    .services #service-select li.current a {
+      width: 100%;
+      background: #e8e8e8;
+      border: 1px solid #c2c2c2; }
+    .services #service-select li.on a {
       background: #ebaa16;
+      border: 1px solid #ebaa16;
       color: #ffffff; }
 .services .services-container {
   box-sizing: border-box;
@@ -3011,7 +3014,7 @@ p.aboutCopy {
       width: 100%; } }
   .services .services-container .service {
     display: none; }
-    .services .services-container .service.current {
+    .services .services-container .service.on {
       display: block; }
     .services .services-container .service ul {
       list-style: none;

@@ -74,34 +74,101 @@ jQuery(document).ready(function($) {
     })();
 
 // Products Services aka terrible javascript that I'm gonna fix
+    // $("#service-select li.one a").click(function(e) {
+    //     $("#service-select li.current").removeClass("current");
+    //     $("#service-select li.one").addClass("current");
+    //     $(".service").removeClass("current");
+    //     $(".service.one").addClass("current");
+    //     e.preventDefault();
+    // });
+    // $("#service-select li.two a").click(function(e) {
+    //     $("#service-select li.current").removeClass("current");
+    //     $("#service-select li.two").addClass("current");
+    //     $(".service").removeClass("current");
+    //     $(".service.two").addClass("current");
+    //     e.preventDefault();
+    // });
+    // $("#service-select li.three a").click(function(e) {
+    //     $("#service-select li.current").removeClass("current");
+    //     $("#service-select li.three").addClass("current");
+    //     $(".service").removeClass("current");
+    //     $(".service.three").addClass("current");
+    //     e.preventDefault();
+    // });
+    // $("#service-select li.four a").click(function(e) {
+    //     $("#service-select li.current").removeClass("current");
+    //     $("#service-select li.four").addClass("current");
+    //     $(".service").removeClass("current");
+    //     $(".service.four").addClass("current");
+    //     e.preventDefault();
+    // });
+
+
+    //cache a reference to the tabs
+    var tabs = $('#service-select li');
+    var tabsLink = $('#service-select li a');
+    var slides = $('.services-container .service');
+
+    //auto-rotate every 5 seconds
+    var timerId = setInterval(function() {
+            //get currently-on tab
+        var onTab = tabs.filter('.on');
+        var onSlide = slides.filter('.on');
+
+            //click either next tab, if exists, else first one
+        var nextTab = onTab.index() < tabs.length-1 ? onTab.next() : tabs.first();
+        var nextSlide = onSlide.index() < slides.length-1 ? onSlide.next() : slides.first();
+        nextTab.click();
+        nextSlide.click();
+    }, 5000);
+
+    tabs.click(function() { 
+        $(this).addClass('on').siblings('.on').removeClass('on'); 
+    });
+    slides.click(function() { 
+        $(this).addClass('on').siblings('.on').removeClass('on'); 
+    });
+    tabsLink.click(function(e) {
+        clearInterval(timerId);
+        e.preventDefault();
+    });
+
     $("#service-select li.one a").click(function(e) {
-        $("#service-select li.current").removeClass("current");
-        $("#service-select li.one").addClass("current");
-        $(".service").removeClass("current");
-        $(".service.one").addClass("current");
+        $("#service-select li.on").removeClass("on");
+        $("#service-select li.one").addClass("on");
+        $(".service").removeClass("on");
+        $(".service.one").addClass("on");
         e.preventDefault();
     });
     $("#service-select li.two a").click(function(e) {
-        $("#service-select li.current").removeClass("current");
-        $("#service-select li.two").addClass("current");
-        $(".service").removeClass("current");
-        $(".service.two").addClass("current");
+        $("#service-select li.on").removeClass("on");
+        $("#service-select li.two").addClass("on");
+        $(".service").removeClass("on");
+        $(".service.two").addClass("on");
         e.preventDefault();
     });
     $("#service-select li.three a").click(function(e) {
-        $("#service-select li.current").removeClass("current");
+        $("#service-select li.on").removeClass("on");
         $("#service-select li.three").addClass("current");
-        $(".service").removeClass("current");
-        $(".service.three").addClass("current");
+        $(".service").removeClass("on");
+        $(".service.three").addClass("on");
         e.preventDefault();
     });
     $("#service-select li.four a").click(function(e) {
-        $("#service-select li.current").removeClass("current");
-        $("#service-select li.four").addClass("current");
-        $(".service").removeClass("current");
-        $(".service.four").addClass("current");
+        $("#service-select li.on").removeClass("on");
+        $("#service-select li.four").addClass("on");
+        $(".service").removeClass("on");
+        $(".service.four").addClass("on");
         e.preventDefault();
     });
+
+
+
+    //on click to tab, turn it on, and turn previously-on tab off
+    // tabs.click(function() { 
+    //     $(this).addClass('on').siblings('.on').removeClass('on'); 
+    //     clearInterval(timerId);
+    // });
 
     // FitText
     $("#main-headline").fitText(2.3, {minFontSize: '25px'});

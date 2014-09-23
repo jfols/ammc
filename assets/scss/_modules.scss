@@ -430,10 +430,13 @@
                 color: $dark-gray;
                 padding: 0.5rem;
                 width: 100%;
+                background: $lighter-gray;
+                border: 1px solid #c2c2c2;
             }
 
-            &.current a {
+            &.on a {
                 background: $yellow;
+                border: 1px solid $yellow;
                 color: $white;
             }
         }
@@ -449,7 +452,7 @@
 
         .service {
             display: none;
-            &.current { display: block; }
+            &.on { display: block; }
 
             ul {
                 list-style: none;
