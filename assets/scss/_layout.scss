@@ -156,6 +156,11 @@ p.aboutCopy {
     margin: 0 auto;
     padding: 0 6rem;
     @media (max-width: 900px) { padding: 0 2rem; }
+    @include responsive(small-screens) {
+            .push.halfCol {
+                margin-left: 0 !important;
+            }
+        }
 }
 
 .messager {

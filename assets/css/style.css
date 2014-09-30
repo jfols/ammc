@@ -2652,6 +2652,9 @@ p.aboutCopy {
   @media (max-width: 900px) {
     .container {
       padding: 0 2rem; } }
+  @media only screen and (max-width: 639px) {
+    .container .push.halfCol {
+      margin-left: 0 !important; } }
 
 .messager {
   display: none;
@@ -2791,13 +2794,13 @@ p.aboutCopy {
         border-radius: 0.3rem; } }
     @media (max-width: 840px) {
       .quickJoin input {
-        width: 93% !important;
         float: left; } }
   .quickJoin .quickButton {
     box-sizing: border-box;
     font-size: 1em;
     position: relative;
     left: -0.3rem;
+    -webkit-appearance: none;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
     @media (max-width: 840px) {
@@ -2890,7 +2893,7 @@ p.aboutCopy {
       .footerTable.oneThird.column {
         width: 100%; }
         .footerTable.oneThird.column.margin-top {
-          margin: 3rem 0 0 0; }
+          margin: 0 0 0 0; }
         .footerTable.oneThird.column.margin-bottom {
           margin: 0 0 3rem 0; } }
   .footerTable .footerRow {
