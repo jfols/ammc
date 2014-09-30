@@ -52,7 +52,8 @@ body {
         padding-left: 3rem;
     }
     @include responsive(small-screens) {
-        padding: 2rem 3rem 0 3rem;
+        padding: 2rem 3rem 2rem 3rem;
+        height: auto;
         // height: 14rem;
         // left: -15%;
         // width: 130%;
@@ -61,6 +62,14 @@ body {
 
 .callUs {
     height: 5.8rem;
+    @include responsive(small-screens) {
+        height: 8.8rem;
+        h3 {
+            a {
+                font-size: 2.2rem;
+            }
+        }
+    }
     padding-top: 4.2rem;
     padding-right: 4rem;
     @extend %rightText;
@@ -88,6 +97,12 @@ body {
         position: relative;
         top: 0.5rem;
         white-space: nowrap;
+        @media (max-width: 457px) {
+            h5 {
+                display: inline-block;
+                margin-bottom: 0.5rem;
+            }
+        }
     }
 
     @media (max-width: 1120px) {

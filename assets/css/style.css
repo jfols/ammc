@@ -2574,12 +2574,18 @@ body {
       padding-left: 3rem; } }
   @media only screen and (max-width: 639px) {
     .logo {
-      padding: 2rem 3rem 0 3rem; } }
+      padding: 2rem 3rem 2rem 3rem;
+      height: auto; } }
 
 .callUs {
   height: 5.8rem;
   padding-top: 4.2rem;
   padding-right: 4rem; }
+  @media only screen and (max-width: 639px) {
+    .callUs {
+      height: 8.8rem; }
+      .callUs h3 a {
+        font-size: 2.2rem; } }
   .callUs h4, .callUs h5 {
     display: inline; }
   .callUs h5 {
@@ -2603,6 +2609,10 @@ body {
     position: relative;
     top: 0.5rem;
     white-space: nowrap; }
+    @media (max-width: 457px) {
+      .callUs .callUsCopy h5 {
+        display: inline-block;
+        margin-bottom: 0.5rem; } }
   @media (max-width: 1120px) {
     .callUs h3 {
       font-size: 3rem; }
