@@ -226,22 +226,27 @@
     </div>
 
     <div class="row smallPad">
-        <div class="four column push halfCol">
-            <input type="text" placeholder="Your name goes here" />
-        </div>
-        <div class="four column push halfCol">
-            <input type="text" placeholder="Your email goes here" />
-        </div>
-        <div class="nine column push halfCol">
-            <textarea placeholder="Your message goes here"></textarea>
-        </div>
+        <form method="post" action="contactengine.php">
+            <div class="four column push halfCol">
+                <input type="text" name="Name" id="Name" placeholder="Your name goes here" />
+            </div>
+            <div class="four column push halfCol">
+                <input type="text" name="Email" id="Email" placeholder="Your email goes here" />
+            </div>
+            <div class="nine column push halfCol">
+                <textarea id="Message" placeholder="Your message goes here"></textarea>
+            </div>
+            <input type="submit" name="submit" value="Let's get started" class="contactButton" />
+            <!-- <a href="#"><div class="yellowButton contactButton">Let's get started</div></a> -->
+        </form>
     </div>
 
-    <div class="row pad">
+    <!-- <div class="row pad">
         <div class="ten column centerText">
             <a href="#"><div class="yellowButton">Let's get started</div></a>
+            <input type="submit" name="submit" value="Submit" class="yellowButton" />
         </div>
-    </div>
+    </div> -->
 </div>
 
 <footer class="typography footerTypography">

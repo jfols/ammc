@@ -2399,7 +2399,7 @@ a {
 
 /* =Typography
 -------------------------------------------------------------- */
-.montserrat, .purpleButton, .yellowButton, .quickJoin .quickButton, #messager .contactButton, .messager input, .messager textarea, .quickJoin input {
+.montserrat, .purpleButton, .yellowButton, .quickJoin .quickButton, .messager input, .messager textarea, .quickJoin input {
   font-family: "Montserrat", sans-serif; }
 
 .lato {
@@ -2687,7 +2687,7 @@ p.aboutCopy {
     display: none; } }
 /* =Modules
 -------------------------------------------------------------- */
-.purpleButton, .yellowButton, .quickJoin .quickButton, #messager .contactButton {
+.purpleButton, .yellowButton, .quickJoin .quickButton {
   padding: 1.5rem;
   display: inline-block;
   border-radius: 0.3rem;
@@ -2738,6 +2738,9 @@ p.aboutCopy {
   background-color: #ebaa16; }
   .yellowButton:hover, .quickJoin .quickButton:hover {
     background-color: #ecc46a; }
+
+.contactButton {
+  display: none; }
 
 .callList {
   display: inline-block;
@@ -2830,16 +2833,6 @@ p.aboutCopy {
   height: 15rem;
   margin: 1rem 0;
   padding-right: 0; }
-
-#messager .contactButton {
-  background: #ebaa16;
-  background-color: #ebaa16;
-  border: none;
-  display: block;
-  width: auto;
-  margin: 5px auto 0 auto; }
-  #messager .contactButton:hover {
-    background-color: #ecc46a; }
 
 .scrollDown {
   position: absolute;

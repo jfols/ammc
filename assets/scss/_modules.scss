@@ -203,6 +203,21 @@
     }
 }
 
+#messager {
+    .contactButton {
+        @extend %button;
+        background: $yellow;
+        background-color: $yellow;
+        border: none;
+        display: block;
+        width: auto;
+        margin: 5px auto 0 auto;
+        &:hover {
+            background-color: $light-yellow;
+        }
+    }
+}
+
 .scrollDown {
     @extend .centerText;
     position: absolute;
