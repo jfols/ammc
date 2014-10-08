@@ -1,7 +1,12 @@
 <?php
 
+<<<<<<< HEAD
 $EmailFrom = "ammc@gmail.com";
 $EmailTo = "sales@ammc.com, mariannelocke@ammc.com, support@creativefuse.org, cestridge@gmail.com";
+=======
+$EmailFrom = "sales@ammc.com";
+$EmailTo = "mariannelocke@ammc.com, cestridge@gmail.com, andrew.bak3r@gmail.com";
+>>>>>>> FETCH_HEAD
 $Subject = "You've received a new inquiry from your website";
 $Name = Trim(stripslashes($_POST['Name'])); 
 $Tel = Trim(stripslashes($_POST['Tel'])); 
