@@ -1,7 +1,7 @@
 <?php
 
 $EmailFrom = "sales@ammc.com";
-$EmailTo = "mariannelocke@ammc.com, cestridge@gmail.com, andy@creativefuse.org";
+$EmailTo = "mariannelocke@ammc.com, cestridge@gmail.com, andrew.bak3r@gmail.com";
 $Subject = "You've received a new inquiry from your website";
 $Name = Trim(stripslashes($_POST['Name'])); 
 $Tel = Trim(stripslashes($_POST['Tel'])); 
