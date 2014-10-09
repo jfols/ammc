@@ -1,7 +1,19 @@
 /* =Settings
 -------------------------------------------------------------- */
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../../assets/fonts/Montserrat-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-Regular-webfont.woff") format("woff"), url("../../assets/fonts/Montserrat-Regular-webfont.ttf") format("truetype"), url("../../assets/fonts/Montserrat-Regular-webfont.svg#Montserrat-Regular") format("svg");
+  /* Legacy iOS */ }
+@font-face {
+  font-family: 'Lato';
+  src: url("../../assets/fonts/Lato-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../../assets/fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Lato-Regular.woff") format("woff"), url("../../assets/fonts/Lato-Regular.ttf") format("truetype"), url("../../assets/fonts/Lato-Regular.svg#Lato-Regular") format("svg");
+  /* Legacy iOS */ }
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: 'Futura';
+    src: url("futura.svg#futura") format("svg"); } }
 /* =Mixins
 -------------------------------------------------------------- */
 body {
@@ -2354,7 +2366,7 @@ body {
   background-color: rgba(0, 0, 0, 0.85);
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  color: #605268; }
+  color: #000000; }
   @media only screen and (max-width: 639px) {
     body {
       height: auto; } }
