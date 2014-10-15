@@ -1,12 +1,14 @@
 <?php
 
+require_once 'mandrill_src/Mandrill.php';
+$mandrill = new Mandrill('x4-REEzk9BdY6JH2SDUPiw');
+
 $EmailFrom = "sales@ammc.com";
-$EmailTo = "cestridge@gmail.com, andrew.bak3r@gmail.com";
 $Subject = "You've received a new inquiry from your website";
-$Name = Trim(stripslashes($_POST['Name'])); 
-$Tel = Trim(stripslashes($_POST['Tel'])); 
-$Email = Trim(stripslashes($_POST['Email'])); 
-$Message = Trim(stripslashes($_POST['Message'])); 
+$Name = Trim(stripslashes($_POST['Name']));
+//$Tel = Trim(stripslashes($_POST['Tel']));
+$Email = Trim(stripslashes($_POST['Email']));
+$Message = Trim(stripslashes($_POST['Message']));
 
 // validation
 $validationOK=true;
@@ -27,14 +29,58 @@ $Body .= "Message: ";
 $Body .= $Message;
 $Body .= "\n";
 
-// send email 
-$success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
-
-// redirect to success page 
-if ($success){
+try {
+    $message = array(
+        'text' => $Body,
+        'subject' => 'AMMC.com contact us form',
+        'from_email' => 'admin@ammc.com',
+        'from_name' => 'AMMC Contact',
+        'to' => array(
+            array(
+                'email' => 'sales@ammc.com',
+                'name' => 'Sales AMMC',
+                'type' => 'to'
+            ),
+            array(
+              'email' => 'support@creativefuse.org',
+              'name' => 'CFi Support',
+              'type' => 'to'
+            )
+        ),
+        'headers' => array('Reply-To' => $Email),
+        'important' => false,
+        'track_opens' => null,
+        'track_clicks' => null,
+        'auto_text' => null,
+        'auto_html' => null,
+        'inline_css' => null,
+        'url_strip_qs' => null,
+        'preserve_recipients' => null,
+        'view_content_link' => null,
+        'bcc_address' => null,
+        'tracking_domain' => null,
+        'signing_domain' => null,
+        'return_path_domain' => null,
+        'merge' => true,
+        'global_merge_vars' => array(),
+        'merge_vars' => array(),
+        'tags' => array('contact-us'),
+        'subaccount' => null,
+        'google_analytics_domains' => null,
+        'google_analytics_campaign' => null,
+        'metadata' => array(),
+        'attachments' => array(),
+        'images' => array()
+    );
+    $async = false;
+    $result = $mandrill->messages->send($message, $async);// $ip_pool, $send_at);
+    print_r($result);
+  // redirect to success page
   print "<meta http-equiv=\"refresh\" content=\"0;URL=contactthanks.php\">";
-}
-else{
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=contacterror.php\">";
+} catch(Mandrill_Error $e) {
+    // Mandrill errors are thrown as exceptions
+    error_log('A mandrill error occurred: ' . get_class($e) . ' - ' . $e->getMessage());
+    // redirect to error page
+    print "<meta http-equiv=\"refresh\" content=\"0;URL=contacterror.php\">";
 }
 ?>
