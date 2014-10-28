@@ -236,6 +236,16 @@
             <div class="nine column push halfCol">
                 <textarea name="Message" id="Message" placeholder="Your message goes here"></textarea>
             </div>
+            <div id="subjectDivHidden">
+              <label for="subject">Leave this field blank</label>
+              <input type="text" name="subject" id="subject">
+              </div>
+              <script>
+              (function () {
+                  var e = document.getElementById("subjectDivHidden");
+                  e.parentNode.removeChild(e);
+              })();
+              </script>
             <input type="submit" name="submit" value="Let's get started" class="contactButton" />
             <!-- <a href="#"><div class="yellowButton contactButton">Let's get started</div></a> -->
         </form>

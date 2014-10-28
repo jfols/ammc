@@ -10,6 +10,11 @@ $Name = Trim(stripslashes($_POST['Name']));
 $Email = Trim(stripslashes($_POST['Email']));
 $Message = Trim(stripslashes($_POST['Message']));
 
+// check for spam, hidden field should be blank if human
+if(isset($_POST['subject']) && trim($_POST['subject']) != '') {
+    print "<meta http-equiv=\"refresh\" content=\"0;URL=contacterror.php\">";
+}
+
 // validation
 $validationOK=true;
 if (!$validationOK) {
