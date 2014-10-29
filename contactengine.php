@@ -1,6 +1,8 @@
 <?php
 
 require_once 'mandrill_src/Mandrill.php';
+require_once 'recaptcha/recaptchalib.php';
+
 $mandrill = new Mandrill('x4-REEzk9BdY6JH2SDUPiw');
 
 $EmailFrom = "sales@ammc.com";
@@ -10,9 +12,17 @@ $Name = Trim(stripslashes($_POST['Name']));
 $Email = Trim(stripslashes($_POST['Email']));
 $Message = Trim(stripslashes($_POST['Message']));
 
-// check for spam, hidden field should be blank if human
-if(isset($_POST['subject']) && trim($_POST['subject']) != '') {
-    print "<meta http-equiv=\"refresh\" content=\"0;URL=contacterror.php\">";
+// check for spam, recaptcha
+$privatekey = '6Ler0PwSAAAAAAA_ZX57-9fwvGg3FdQhzR4kQzdP';
+$resp = recaptcha_check_answer ($privatekey,
+                                $_SERVER["REMOTE_ADDR"],
+                                $_POST["recaptcha_challenge_field"],
+                                $_POST["recaptcha_response_field"]);
+
+if (!$resp->is_valid) {
+  // What happens when the CAPTCHA was entered incorrectly
+  die ("The reCAPTCHA wasn't entered correctly. Go back and try it again." .
+       "(reCAPTCHA said: " . $resp->error . ")");
 }
 
 // validation
